@@ -10,6 +10,7 @@ COMPOSE=(docker compose -p latex -f docker-compose.yml)
 usage() {
   echo "usage: $0 <slug>       compile output/<slug>/cv.tex" >&2
   echo "       $0 --generate   compile input/cv-base.tex" >&2
+  echo "       $0 --pdftotext  extract input/profile.pdf to stdout" >&2
   echo "       $0 --build ...  rebuild the image first" >&2
   exit 1
 }
@@ -28,6 +29,13 @@ fi
 
 if [[ "${1:-}" == "--generate" ]]; then
   cmd='cd /data/input && xelatex cv-base.tex'
+elif [[ "${1:-}" == "--pdftotext" ]]; then
+  pdf="$LISTEN_FOR_WORK_HOME/input/profile.pdf"
+  if [[ ! -f "$pdf" ]]; then
+    echo "error: missing $pdf" >&2
+    exit 1
+  fi
+  cmd='pdftotext -layout /data/input/profile.pdf -'
 elif [[ -n "${1:-}" ]]; then
   slug="$1"
   if [[ ! "$slug" =~ ^[a-zA-Z0-9-]+$ ]]; then
@@ -37,6 +45,14 @@ elif [[ -n "${1:-}" ]]; then
   cmd="cd /data/output/${slug} && xelatex cv.tex"
 else
   usage
+fi
+
+if docker image inspect listen-for-work-latex:latest >/dev/null 2>&1; then
+  poppler_label=$(docker image inspect listen-for-work-latex:latest \
+    --format '{{index .Config.Labels "listen-for-work.poppler"}}' 2>/dev/null || true)
+  if [[ "${1:-}" == "--pdftotext" && "$poppler_label" != "1" ]]; then
+    force_build=1
+  fi
 fi
 
 if [[ "$force_build" -eq 1 ]] || ! docker image inspect listen-for-work-latex:latest >/dev/null 2>&1; then

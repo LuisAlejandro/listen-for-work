@@ -109,7 +109,14 @@ Non-interactive: follow the blueprint prompt. Auto-resolve ties with the ranking
 - **PDF present:** import when **any** of: `cv-base.tex` missing; `cv-base.tex` contains `Your Name`; `profile.pdf` is newer than `cv-base.tex`; `profile.pdf` is newer than `profile.md` or `profile.md` is missing. Compare mtimes with `stat`. A newer PDF overwrites hand edits.
 - Otherwise leave both files.
 
-When importing: extract text (`pdftotext -layout` preferred, else `read_file` the PDF). Fill `${HERMES_SKILL_DIR}/templates/cv/cv-base.tex` into `$home/input/cv-base.tex` (keep preamble, macros, `/work/fonts/`). Write `$home/input/profile.md` from the example section list. Honesty: never invent jobs, dates, or metrics. Then continue to Phase 1 unless this is an import-only run.
+When importing: extract text with Docker Poppler (not a host `pdftotext`):
+
+```bash
+LISTEN_FOR_WORK_HOME="$home" \
+  "${HERMES_SKILL_DIR}/templates/cv/compile.sh" --pdftotext
+```
+
+If that fails or prints nothing, `read_file` the PDF. Do not OCR a scanned export unless those two paths fail. Fill `${HERMES_SKILL_DIR}/templates/cv/cv-base.tex` into `$home/input/cv-base.tex` (keep preamble, macros, `/work/fonts/`). Write `$home/input/profile.md` from the example section list. Honesty: never invent jobs, dates, or metrics. Then continue to Phase 1 unless this is an import-only run.
 
 ### Phase 1 — Scan
 
@@ -183,6 +190,10 @@ An empty qualifying list is still success: return the digest (stats and no quali
 ## Pitfalls
 
 - CAPTCHA / login walls: skip that source, continue.
+- Stale board endpoints: Greenhouse HTML/`.atom` and Lever HTML 404 for many companies — use the JSON APIs in `references/sources.md`. GOB `/search/jobs` is dead; use the category pages.
+- GOB "Remote" is often *locally remote only*: open each detail page and read the "Remote work policy" residency restriction before ranking; drop postings that exclude the candidate's location.
+- GOB and WWR detail pages are JS-rendered: grep the job URLs out of the raw HTML, then open each detail page in the browser to read the JD.
+- HN Algolia default query returns stale threads: use the recency filter in `references/sources.md` to find the current month.
 - Unescaped `%` / `&` / `$` / `_` abort XeLaTeX.
 - `\Large` tagline or long bullets overflow the margin. Keep `\normalsize` and ±15% length.
 - Overfull `\hbox`: shorten the bullet; do not shrink margins.

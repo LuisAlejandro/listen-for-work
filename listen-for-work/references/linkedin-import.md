@@ -33,13 +33,14 @@ grep -q 'Your Name' "$tex"  # only if tex exists
 
 ## Extract
 
-Prefer Poppler:
+Use Poppler inside the XeLaTeX image (Docker is already required). Do not install `pdftotext` on the host.
 
 ```bash
-pdftotext -layout "$home/input/profile.pdf" -
+LISTEN_FOR_WORK_HOME="$home" \
+  "${HERMES_SKILL_DIR}/templates/cv/compile.sh" --pdftotext
 ```
 
-If `pdftotext` is missing, `read_file` the PDF with Hermes. Do not OCR a scanned export unless those two paths fail.
+That writes `input/profile.pdf` text to stdout (`pdftotext -layout` at `/data/input/profile.pdf`). The script builds the image if it is missing, or rebuilds if the current image has no Poppler. If the command fails or prints nothing, `read_file` the PDF with Hermes. Do not OCR a scanned export unless those two paths fail.
 
 Use the extracted text as the only source. LinkedIn PDFs are noisy (section labels, “Show more”, contact order). Keep facts; drop UI chrome.
 

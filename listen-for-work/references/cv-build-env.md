@@ -53,6 +53,7 @@ Compile with `LISTEN_FOR_WORK_HOME` set to `$home`:
 ```bash
 export LISTEN_FOR_WORK_HOME="$HOME/listen-for-work"
 "${HERMES_SKILL_DIR}/templates/cv/compile.sh" --generate   # input/cv-base.tex
+"${HERMES_SKILL_DIR}/templates/cv/compile.sh" --pdftotext  # input/profile.pdf → stdout
 "${HERMES_SKILL_DIR}/templates/cv/compile.sh" acme         # output/acme/cv.tex
 "${HERMES_SKILL_DIR}/templates/cv/compile.sh" --build acme # rebuild image first
 ```
@@ -87,4 +88,4 @@ After `xelatex`, scan the `.log` for:
 3. XeLaTeX fatal error: unescaped `%`, `&`, `$`, or `_` in rewritten bullets.
 4. Margin overflow: oversized header, narrower margins than the base, or bullets over 115% of original length.
 5. Hunt skipped CVs: `input/cv-base.tex` still contains `Your Name` (no PDF import, or the PDF lacked a name).
-6. `compile.sh` with no slug (and without `--generate`) fails on purpose.
+6. `compile.sh` with no slug (and without `--generate` or `--pdftotext`) fails on purpose.
