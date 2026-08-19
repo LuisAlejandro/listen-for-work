@@ -1,0 +1,259 @@
+[
+  {
+    "name": "Anthropic",
+    "careers_url": "https://www.anthropic.com/careers",
+    "board_type": "greenhouse",
+    "board_slug": "anthropic",
+    "why_target": "AI/LLM leader, heavy on Python/TypeScript backend, remote-friendly"
+  },
+  {
+    "name": "Anysphere (Cursor)",
+    "careers_url": "https://cursor.com/careers",
+    "board_type": "custom",
+    "why_target": "AI-native IDE, matches user's AI-first engineering focus"
+  },
+  {
+    "name": "Vercel",
+    "careers_url": "https://vercel.com/careers",
+    "board_type": "ashby",
+    "board_slug": "vercel",
+    "why_target": "Next.js/TypeScript centric, remote-first, high bar"
+  },
+  {
+    "name": "Linear",
+    "careers_url": "https://linear.app/careers",
+    "board_type": "ashby",
+    "board_slug": "linear",
+    "why_target": "TypeScript/React elite team, remote-first"
+  },
+  {
+    "name": "Supabase",
+    "careers_url": "https://supabase.com/careers",
+    "board_type": "greenhouse",
+    "board_slug": "supabase",
+    "why_target": "Postgres/Go/TypeScript, heavy on open-source infra"
+  },
+  {
+    "name": "Railway",
+    "careers_url": "https://railway.app/careers",
+    "board_type": "lever",
+    "board_slug": "railway",
+    "why_target": "Platform/infrastructure, Go/TypeScript, remote"
+  },
+  {
+    "name": "Render",
+    "careers_url": "https://render.com/careers",
+    "board_type": "greenhouse",
+    "board_slug": "render",
+    "why_target": "Platform-as-a-service, Go backend, remote-first"
+  },
+  {
+    "name": "PlanetScale",
+    "careers_url": "https://planetscale.com/careers",
+    "board_type": "ashby",
+    "board_slug": "planetscale",
+    "why_target": "Vitess/Go/MySQL at scale, remote"
+  },
+  {
+    "name": "Neon",
+    "careers_url": "https://neon.tech/careers",
+    "board_type": "greenhouse",
+    "board_slug": "neon",
+    "why_target": "Serverless Postgres, Rust/TypeScript, remote"
+  },
+  {
+    "name": "Fly.io",
+    "careers_url": "https://fly.io/jobs",
+    "board_type": "custom",
+    "why_target": "Edge platform, Go/Elixir, remote-first, OSS culture"
+  },
+  {
+    "name": "Upstash",
+    "careers_url": "https://upstash.com/careers",
+    "board_type": "custom",
+    "why_target": "Serverless Redis/Kafka, Go/TypeScript"
+  },
+  {
+    "name": "Resend",
+    "careers_url": "https://resend.com/careers",
+    "board_type": "ashby",
+    "board_slug": "resend",
+    "why_target": "Email API, React/TypeScript/Go, remote"
+  },
+  {
+    "name": "WorkOS",
+    "careers_url": "https://workos.com/careers",
+    "board_type": "ashby",
+    "board_slug": "workos",
+    "why_target": "Enterprise auth platform, TypeScript/Go, remote"
+  },
+  {
+    "name": "Figma",
+    "careers_url": "https://www.figma.com/careers",
+    "board_type": "greenhouse",
+    "board_slug": "figma",
+    "why_target": "TypeScript/React/C++, remote-friendly, high impact"
+  },
+  {
+    "name": "Notion",
+    "careers_url": "https://www.notion.so/careers",
+    "board_type": "greenhouse",
+    "board_slug": "notion",
+    "why_target": "TypeScript/Node/React, remote, scale challenges"
+  },
+  {
+    "name": "GitLab",
+    "careers_url": "https://about.gitlab.com/jobs/",
+    "board_type": "greenhouse",
+    "board_slug": "gitlab",
+    "why_target": "All-remote pioneer, Ruby/Go/Vue/TypeScript, CI/CD"
+  },
+  {
+    "name": "Sourcegraph",
+    "careers_url": "https://about.sourcegraph.com/jobs",
+    "board_type": "greenhouse",
+    "board_slug": "sourcegraph",
+    "why_target": "Code intelligence, Go/TypeScript, remote-first"
+  },
+  {
+    "name": "Sentry",
+    "careers_url": "https://sentry.io/careers",
+    "board_type": "greenhouse",
+    "board_slug": "sentry",
+    "why_target": "Error monitoring, Python/TypeScript, remote"
+  },
+  {
+    "name": "PostHog",
+    "careers_url": "https://posthog.com/careers",
+    "board_type": "ashby",
+    "board_slug": "posthog",
+    "why_target": "Product analytics, Python/TypeScript, small all-remote team"
+  },
+  {
+    "name": "Temporal",
+    "careers_url": "https://temporal.io/careers",
+    "board_type": "lever",
+    "board_slug": "temporal",
+    "why_target": "Workflow orchestration, Go/TypeScript, remote"
+  },
+  {
+    "name": "Grafana Labs",
+    "careers_url": "https://grafana.com/about/careers",
+    "board_type": "greenhouse",
+    "board_slug": "grafanalabs",
+    "why_target": "Observability, Go/TypeScript, remote-first"
+  },
+  {
+    "name": "Stripe",
+    "careers_url": "https://stripe.com/jobs",
+    "board_type": "greenhouse",
+    "board_slug": "stripe",
+    "why_target": "Payments infra, Ruby/Go/TypeScript, remote"
+  },
+  {
+    "name": "Cloudflare",
+    "careers_url": "https://www.cloudflare.com/careers",
+    "board_type": "greenhouse",
+    "board_slug": "cloudflare",
+    "why_target": "Edge platform, Rust/Go/TypeScript, remote-friendly"
+  },
+  {
+    "name": "Tailscale",
+    "careers_url": "https://tailscale.com/careers",
+    "board_type": "custom",
+    "why_target": "Networking, Go, remote, small high-impact team"
+  },
+  {
+    "name": "Replicate",
+    "careers_url": "https://replicate.com/careers",
+    "board_type": "lever",
+    "board_slug": "replicate",
+    "why_target": "ML deployment platform, Python/Go, remote"
+  },
+  {
+    "name": "Together AI",
+    "careers_url": "https://www.together.ai/careers",
+    "board_type": "ashby",
+    "board_slug": "togetherai",
+    "why_target": "Inference optimization, CUDA/Go/Python, remote"
+  },
+  {
+    "name": "Hugging Face",
+    "careers_url": "https://huggingface.co/jobs",
+    "board_type": "ashby",
+    "board_slug": "huggingface",
+    "why_target": "ML ecosystem, Python/Go/Node, remote-first"
+  },
+  {
+    "name": "Pinecone",
+    "careers_url": "https://www.pinecone.io/careers",
+    "board_type": "ashby",
+    "board_slug": "pinecone",
+    "why_target": "Vector DB, Go/Rust/Python, remote"
+  },
+  {
+    "name": "Weaviate",
+    "careers_url": "https://weaviate.io/careers",
+    "board_type": "custom",
+    "why_target": "Vector search, Go, remote"
+  },
+  {
+    "name": "HashiCorp",
+    "careers_url": "https://www.hashicorp.com/careers",
+    "board_type": "greenhouse",
+    "board_slug": "hashicorp",
+    "why_target": "Infra tooling, Go, remote-first"
+  },
+  {
+    "name": "Pulumi",
+    "careers_url": "https://pulumi.com/careers",
+    "board_type": "greenhouse",
+    "board_slug": "pulumi",
+    "why_target": "IaC platform, Go/TypeScript, remote"
+  },
+  {
+    "name": "Databricks",
+    "careers_url": "https://www.databricks.com/company/careers",
+    "board_type": "greenhouse",
+    "board_slug": "databricks",
+    "why_target": "Data/ML platform, Scala/Python/Go, remote"
+  },
+  {
+    "name": "Datadog",
+    "careers_url": "https://careers.datadoghq.com/",
+    "board_type": "greenhouse",
+    "board_slug": "datadog",
+    "why_target": "Observability, Go/Python, remote"
+  },
+  {
+    "name": "Trigger.dev",
+    "careers_url": "https://trigger.dev/careers",
+    "board_type": "custom",
+    "why_target": "Background jobs platform, TypeScript/Node, remote"
+  },
+  {
+    "name": "Inngest",
+    "careers_url": "https://inngest.com/careers",
+    "board_type": "custom",
+    "why_target": "Event-driven jobs, TypeScript/Go, remote"
+  },
+  {
+    "name": "Cal.com",
+    "careers_url": "https://cal.com/careers",
+    "board_type": "greenhouse",
+    "board_slug": "cal",
+    "why_target": "Scheduling infra, TypeScript/Next.js/Prisma, remote"
+  },
+  {
+    "name": "Novu",
+    "careers_url": "https://novu.co/careers",
+    "board_type": "custom",
+    "why_target": "Notification infrastructure, TypeScript/Node, remote"
+  },
+  {
+    "name": "Loose leaf (formerly NuxtLabs)",
+    "careers_url": "https://nuxt.com/enterprise/jobs",
+    "board_type": "custom",
+    "why_target": "Vue/Nuxt ecosystem — relevant if expanding beyond React"
+  }
+]

@@ -1,0 +1,12 @@
+.DS_Store
+.env
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.idea/
+.vscode/
+*.aux
+*.log
+*.out
+*.pdf

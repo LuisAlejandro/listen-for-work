@@ -1,0 +1,10 @@
+{
+  "$schema": "https://skills.sh/schemas/skills.sh.schema.json",
+  "groupings": [
+    {
+      "title": "Job search",
+      "description": "Weekly remote job scan, ranking, digest, and LaTeX CV tailoring.",
+      "skills": ["listen-for-work"]
+    }
+  ]
+}

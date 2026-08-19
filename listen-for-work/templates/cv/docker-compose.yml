@@ -1,0 +1,10 @@
+services:
+  latex:
+    image: listen-for-work-latex:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/work
+      - ${LISTEN_FOR_WORK_HOME}:/data
+    working_dir: /work
